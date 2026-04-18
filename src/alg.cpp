@@ -1,4 +1,5 @@
 // Copyright 2025 NNTU-CS
+#include "alg.h"
 #include "tstack.h"
 #include <string>
 #include <map>
@@ -11,8 +12,7 @@ std::string infx2pstfx(const std::string& inf) {
     if (inf[i] >= '0' && inf[i] <= '9') {
       if (temp.length() > 0) temp += ' ';
       temp += inf[i];
-    }
-    else if (inf[i] == ')') {
+    } else if (inf[i] == ')') {
       while (stack1.getSize() != 0 && stack1.getValue() != '(') {
         if (temp.length() > 0) temp += ' ';
         temp += stack1.pop();
@@ -20,8 +20,7 @@ std::string infx2pstfx(const std::string& inf) {
       if (stack1.getSize() != 0) {
         stack1.pop();
       }
-    }
-    else if (inf[i] == '(') {
+    } else if (inf[i] == '(') {
       stack1.push(inf[i]);
     } else {
       int priority_n;
