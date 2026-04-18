@@ -9,7 +9,7 @@ T arr[size];
 int top;
 public:
 TStack(): top(-1) {} 
-size_t getSize() const { return top + 1; }
+int getSize() const { return top + 1; }
     
 void push(T value) { 
   if (top + 1 >= size) std::cout << "Out of size" << std::endl;
