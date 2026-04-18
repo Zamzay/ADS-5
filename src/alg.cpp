@@ -1,8 +1,8 @@
 // Copyright 2025 NNTU-CS
 #include "alg.h"
-#include "tstack.h"
 #include <string>
 #include <map>
+#include "tstack.h"
 
 std::string infx2pstfx(const std::string& inf) {
   std::string temp;
