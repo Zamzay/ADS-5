@@ -6,13 +6,13 @@
 template<typename T, int kMaxSize>
 class TStack {
  private:
-  T arr[size];
+  T arr[kMaxSize];
   int top;
  public:
   TStack(): top(-1) {}
   int getSize() const { return top + 1; }
   void push(T value) {
-    if (top + 1 >= size) std::cout << "Out of size" << std::endl;
+    if (top + 1 >= kMaxSize) std::cout << "Out of size" << std::endl;
     else arr[++top] = value;
   }
   T pop() {
