@@ -4,7 +4,25 @@
 
 template<typename T, int size>
 class TStack {
-  // добавьте код стека
+private:
+T arr[size];
+int top;
+public:
+TStack(): top(-1) {} 
+size_t getSize() const { return top + 1; }
+    
+void push(T value) { 
+  if (top + 1 >= size) std::cout << "Out of size" << std::endl;
+  else arr[++top] = value;
+}
+T pop() {
+  if (top != -1) return arr[top--];
+  else return T();
+}
+T getValue() const {
+  if (top != -1) return arr[top];
+  else return T();
+}
 };
 
 #endif  // INCLUDE_TSTACK_H_
